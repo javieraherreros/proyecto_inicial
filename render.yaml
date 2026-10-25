@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: el-camino-del-chungo
+    env: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn proyecto_inicial.wsgi:application"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.14.3
